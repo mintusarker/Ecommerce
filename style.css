@@ -1,23 +1,58 @@
-.navber {
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+body {
+  width: 100%;
+}
+
+#header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 60px;
+  padding: 20px 80px;
+  background: #c6c7cf;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
 }
 
-.navlink {
-
+#nabver {
+  display: flex;
+  align-items: center;
+  justify-items: center;
 }
 
-.navlink li {
+#nabver li {
   list-style: none;
-  display: inline;
+  padding: 0 20px;
+  position: relative;
 }
 
-.navlink li a {
+#nabver li a {
   text-decoration: none;
-  margin: 0 12px;
-  font-weight: 400;
-  font-size: 17px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1a1a1a;
+  transition: 0.3s ease;
 }
 
+#nabver li a:hover,
+#nabver li a.active{
+  color: #088178;
+}
+
+#nabver li a.active::after,
+#nabver li a:hover::after
+{
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #088178;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
