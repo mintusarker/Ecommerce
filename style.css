@@ -1,0 +1,23 @@
+.navber {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 60px;
+}
+
+.navlink {
+
+}
+
+.navlink li {
+  list-style: none;
+  display: inline;
+}
+
+.navlink li a {
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 400;
+  font-size: 17px;
+}
+
