@@ -16,7 +16,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 80px;
-  background: #c6c7cf;
+  background: #c7c9d7;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
 }
 
@@ -24,6 +24,7 @@ body {
   display: flex;
   align-items: center;
   justify-items: center;
+  position: relative;
 }
 
 #nabver li {
@@ -31,6 +32,13 @@ body {
   padding: 0 20px;
   position: relative;
 }
+
+/* #nabver li i {
+  font-size: 25px;
+  color: brown;
+} */
+
+
 
 #nabver li a {
   text-decoration: none;
@@ -41,13 +49,12 @@ body {
 }
 
 #nabver li a:hover,
-#nabver li a.active{
+#nabver li a.active {
   color: #088178;
 }
 
 #nabver li a.active::after,
-#nabver li a:hover::after
-{
+#nabver li a:hover::after {
   content: "";
   width: 30%;
   height: 2px;
@@ -55,4 +62,60 @@ body {
   position: absolute;
   bottom: -4px;
   left: 20px;
+}
+
+.mobile {
+  display: none;
+}
+
+#close{
+ display: none;
+}
+
+@media (max-width: 799px) {
+  #nabver {
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-items: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 250px;
+    background: #c7c9d7;
+    box-shadow: 10px 10px 5px rgb(15, 15, 15);
+    transition: .4s ease;
+  }
+
+  #nabver li {
+    margin-bottom: 30px;
+  }
+
+  #nabver.active {
+    right: 0px;
+  }
+
+  .mobile i {
+    cursor: pointer;
+  }
+
+  .mobile {
+    display: initial;
+  }
+  #close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    display: initial;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  #header {
+   
+    padding: 20px 30px;
+    
+}
 }

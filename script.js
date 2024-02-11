@@ -1,8 +1,18 @@
-const bar = document.getElementById('mobile-bars-icon-click'); 
-const mobiles = document.getElementById('mobile');
+const bar = document.getElementById('bar'); 
+
+const close = document.getElementById('close'); 
+
+const nav = document.getElementById('nabver');
 
 if(bar){
     bar.addEventListener('click', ()=> {
-        mobiles.classList.remove('active')
+        nav.classList.add("active")
     })
 }
+
+if(close){
+    close.addEventListener('click', ()=> {
+        nav.classList.remove("active")
+    })
+}
+
